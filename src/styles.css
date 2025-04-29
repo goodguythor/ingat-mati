@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'RobloxFont';
+  src:  url('../assets/fonts/roblox_2/RobloxFont-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SuperCartoon';
+  src: url('../assets/fonts/super-cartoon-font/SuperCartoon-6R791.ttf') format('truetype');
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center;
+  justify-content: center;
+  align-items: center; */
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-cell {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Optional spacing */
+    padding: 10px;
+}
+
+.cell {
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  position: relative;
+}
+
+.front, .back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Front side */
+.front {
+  background-color: rgb(0, 0, 0);
+  font-family: 'SuperCartoon', sans-serif;
+  font-size: 12px;
+  color: white;
+  transform: rotateY(0deg);
+}
+
+/* Back side */
+.back {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+
+/* When flipped */
+.cell.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.cell.flipped .back {
+  transform: rotateY(360deg);
+}
+
+.cell.matched .front {
+  transform: rotateY(180deg);
+}
+
+.web-title {
+  position: relative;
+  /* top: 0; */
+  text-align: center;
+  color: black; /* Change header color to white */
+  font-size: 48px; /* Adjust font size as needed */
+  font-family: 'RobloxFont', sans-serif;
+}
+
+.score {
+  position: relative;
+  /* top: 0; */
+  text-align: center;
+  color: black; /* Change header color to white */
+  font-size: 24px; /* Adjust font size as needed */
+  font-family: 'SuperCartoon', sans-serif;
+}
+
+button { 
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: black; 
+  background-color: white;
+  font-size: 12px; /* Increase font size */
+  padding: 10px 20px; /* Add padding for a larger button */
+  border-radius: 2px; /* Optional: Add rounded corners */
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  cursor: pointer; 
+}
