@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'RobloxFont';
-  src:  url('ingat-mati/assets/fonts/roblox_2/RobloxFont-Regular.ttf') format('truetype');
+  src:  url('https://goodguythor.github.io/ingat-mati/assets/fonts/roblox_2/RobloxFont-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'SuperCartoon';
-  src: url('ingat-mati/assets/fonts/super-cartoon-font/SuperCartoon-6R791.ttf') format('truetype');
+  src: url('https://goodguythor.github.io/ingat-mati/assets/fonts/super-cartoon-font/SuperCartoon-6R791.ttf') format('truetype');
 }
 
 main {
