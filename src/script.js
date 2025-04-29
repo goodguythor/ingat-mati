@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const generatePairs = () => {
-        const baseImages = Array.from({ length: 8 }, (_, i) => `../assets/images/brainrot/${i + 1}.jpg`);
+        const baseImages = Array.from({ length: 8 }, (_, i) => `assets/images/brainrot/${i + 1}.jpg`);
         const imagePairs = [...baseImages, ...baseImages];
         return imagePairs.sort(() => Math.random() - 0.5);
     }
