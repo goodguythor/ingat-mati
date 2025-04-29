@@ -117,6 +117,14 @@ button:hover {
   cursor: pointer; 
 }
 
+footer {
+  font-size: 12px;
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   main {
     position: absolute;
@@ -142,7 +150,7 @@ button:hover {
 
   .cell {
     width: 80px;
-    height: 80px;
+    height: 60px;
     position: relative;
   }
 
@@ -161,5 +169,9 @@ button:hover {
     padding: 5px 10px;
     border-radius: 1px;
     margin-top: 10px; /* Add spacing from cell */
+  }
+
+  footer {
+    font-size: 6px;
   }
 }
