@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'RobloxFont';
-  src:  url('https://goodguythor.github.io/ingat-mati/assets/fonts/roblox_2/RobloxFont-Regular.ttf') format('truetype');
+  src: url('https://goodguythor.github.io/ingat-mati/assets/fonts/roblox_2/RobloxFont-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -99,16 +99,67 @@ main {
 
 button { 
   position: relative;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   color: black; 
   background-color: white;
   font-size: 12px; /* Increase font size */
   padding: 10px 20px; /* Add padding for a larger button */
   border-radius: 2px; /* Optional: Add rounded corners */
+  bottom: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
 }
 
 button:hover {
   background-color: #f0f0f0;
   cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+  main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-direction: row; /* Change from row to column */
+    align-items: center;
+  }
+
+  .grid-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    align-items: center; /* Center items horizontally */
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+
+  .web-title {
+    font-size: 32px;
+  }
+
+  .score {
+    position: relative;
+    font-size: 12px;
+  }
+
+  button {
+    /* position: relative; */
+    font-size: 8px;
+    padding: 5px 10px;
+    border-radius: 1px;
+    margin-top: 10px; /* Add spacing from cell */
+  }
 }
