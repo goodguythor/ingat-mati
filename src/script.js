@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         setTimeout(() => {
                             if(score === 8) {
                                 alert('You won!');
+                                console.log(document.querySelector('.player-name')?.value);
                                 fetch(`${API_URL}/leaderboard`, {
                                     method: 'POST',
                                     headers: {
