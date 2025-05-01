@@ -84,18 +84,56 @@ main {
   /* top: 0; */
   text-align: center;
   color: black; /* Change header color to white */
-  font-size: 48px; /* Adjust font size as needed */
+  font-size: 128px; /* Adjust font size as needed */
   font-family: 'RobloxFont', sans-serif;
 }
 
-.score {
-  position: relative;
-  /* top: 0; */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%; /* Adjust width to make it smaller */
+  max-width: 300px; /* Set a maximum width */
+  margin: 5px auto; /* Center it horizontally */
+  font-family: 'SuperCartoon', sans-serif;
   text-align: center;
+} 
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #ccc;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+.point-container {
+  display: flex;
+  justify-content: space-between; /* Push items to left and right */
+  padding: 0 20px; /* Optional: add horizontal padding */
+  align-items: center;
   color: black; /* Change header color to white */
   font-size: 24px; /* Adjust font size as needed */
   font-family: 'SuperCartoon', sans-serif;
 }
+
+.player-name {
+  font-size: 24px; /* Adjust font size as needed */
+  font-family: 'SuperCartoon', sans-serif;
+  text-align: center;
+}
+
+/* .score, .turns {
+  color: black;
+  font-size: 24px; 
+  font-family: 'SuperCartoon', sans-serif;
+} */
 
 button { 
   position: relative;
@@ -116,28 +154,21 @@ button:hover {
   background-color: #f0f0f0;
   cursor: pointer; 
 }
-
 footer {
-  font-size: 12px;
-  position: fixed; 
-  bottom: 0; 
-  width: 100%; 
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
-  
+@media (max-width: 768px) {  
   .grid-container {
     display: flex;
     flex-direction: row; /* Change from row to column */
     align-items: center;
+    justify-content: center;
   }
 
   .grid-cell {
@@ -155,13 +186,21 @@ footer {
   }
 
   .web-title {
+    padding: 0;
     font-size: 32px;
   }
 
-  .score {
-    position: relative;
+  .point-container {
     font-size: 12px;
   }
+
+  .player-name {
+    font-size: 12px;
+  }
+
+  .leaderboard {
+    display: none;
+  } 
 
   button {
     /* position: relative; */
@@ -173,5 +212,6 @@ footer {
 
   footer {
     font-size: 6px;
+    text-align: center;
   }
 }

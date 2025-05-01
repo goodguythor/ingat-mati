@@ -11,7 +11,25 @@
         <div class="web-title">INGAT MATI</div>
     </header>
     <main>
-        <div class="score"></div>
+        <div class="leaderboard">
+            <table id="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Player Name</th>
+                    <th>Turns</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows will be populated by JS -->
+                </tbody>
+            </table>
+        </div>
+        <div class="point-container">
+            <div class="score"></div>
+            <input type="text" class="player-name" placeholder="Enter your name">
+            <div class="turns"></div>
+        </div>
         <div class="grid-container">
             <div class="grid-cell">
                 <div class="cell">
@@ -90,6 +108,7 @@
             <p>&copy; 2025 goodguythor</p>
         </div>
     </footer>
+    <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
