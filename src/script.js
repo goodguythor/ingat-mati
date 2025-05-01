@@ -5,16 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.querySelector('.score');
     const turnDisplay = document.querySelector('.turns');
     const resetButton = document.querySelector('button');
-    const playerName = document.querySelector('.player-name'); 
     let clicked = 0;
     let score = 0;
     let turns = 0;
-    let playerNameValue = ""; 
     const API_URL = 'http://localhost:5000'; 
 
     scoreDisplay.textContent = `Score: ${score}`;
     turnDisplay.textContent = `Turns: ${turns}`;
-    playerName.textContent = `Player: ${playerNameValue}`;
 
     function updateLeaderboard() {
         fetch(`${API_URL}/leaderboard`)
@@ -78,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clicked = 0;
         score = 0;
         turns = 0;
-        playerNameValue = "";
-        playerName.textContent = `Player: ${playerNameValue}`;
         turnDisplay.textContent = `Turns: ${turns}`;
         scoreDisplay.textContent = `Score: ${score}`;
         resetGame();
@@ -115,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         'Content-Type': 'application/json',
                                     },
                                     body: JSON.stringify({
-                                        playerName: playerNameValue || "Anonymous",
+                                        playerName: document.querySelector('.player-name')?.value || "Anonymous",
                                         turns: turns,
                                     }),
                                 })
